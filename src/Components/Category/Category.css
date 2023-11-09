@@ -1,0 +1,93 @@
+:root{
+    --PrimaryColor: hsl(286, 99%, 40%);
+    --SecondaryColor: hsl(278, 66%, 49%);
+    --gradientColor: linear-gradient(to right, hsl(278, 66%, 49%), hsl(286, 99%, 40%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+    --cardHover: rgb(225, 225, 235);
+}
+
+.category{
+    height: 530px;
+    width: 100%;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  left: calc(50% - 180px);
+  width: 300px;
+  height: 100px;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+img:nth-child(6) {
+  animation-delay: 10s;
+}
+
+.title{
+  position: relative;
+  width: max-content;
+  color: var(--textColor);
+  margin: 1rem 0;
+  z-index: 2;
+}
+
+@media screen and (min-width: 500px){
+  .title{
+      font-size: 1.5rem;
+      &::after{
+          width: 155px !important;
+      }
+  }
+}
